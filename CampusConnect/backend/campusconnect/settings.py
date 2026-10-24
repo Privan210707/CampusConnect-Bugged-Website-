@@ -149,7 +149,8 @@ CORS_ALLOWED_ORIGINS = env_list(
         "http://127.0.0.1:8000",
         "http://localhost:8000",
         "https://campusconnect-website-frontend.vercel.app",
-        "https://campusconnect-bug-hunt-git-bug-hunt-2026-privan1.vercel.app"
+        "https://campusconnect-bug-hunt-git-bug-hunt-2026-privan1.vercel.app",
+        "https://campusconnect-bugged-website-fronte.vercel.app"
     ],
 )
 
