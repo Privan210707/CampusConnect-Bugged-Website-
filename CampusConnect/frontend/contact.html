@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | CampusConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">CC</span>
+          <span class="logo-text">
+            <strong>CampusConnect</strong>
+            <span>Riverside College</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>Reach the college office or send feedback through the form.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-grid">
+          <aside class="contact-details" id="contact-details"></aside>
+          <div class="form-card">
+            <h2>Feedback form</h2>
+            <form id="feedback-form" novalidate>
+              <div class="field">
+                <label for="feedback-name">Full name</label>
+                <input id="feedback-name" name="name" type="text" autocomplete="name" required />
+                <p class="error" data-error-for="name"></p>
+              </div>
+              <div class="field">
+                <label for="feedback-email">Email</label>
+                <input id="feedback-email" name="email" type="email" autocomplete="email" required />
+                <p class="error" data-error-for="email"></p>
+              </div>
+              <div class="field">
+                <label for="feedback-subject">Subject</label>
+                <input id="feedback-subject" name="subject" type="text" required />
+                <p class="error" data-error-for="subject"></p>
+              </div>
+              <div class="field">
+                <label for="feedback-message">Message</label>
+                <textarea id="feedback-message" name="message" rows="5" required></textarea>
+                <p class="error" data-error-for="message"></p>
+              </div>
+              <button class="btn btn-navy" type="submit">Send feedback</button>
+              <p id="feedback-status" class="form-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | CampusConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">CC</span>
+          <span class="logo-text">
+            <strong>CampusConnect</strong>
+            <span>Riverside College</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">Student portal</p>
+          <h1>Welcome to Riverside College</h1>
+          <p id="college-intro">
+            CampusConnect is the college hub for news, clubs, and campus events.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="clubs.html">Explore clubs</a>
+            <a class="btn btn-ghost" href="events.html">See upcoming events</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="announcements-heading">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 id="announcements-heading">Announcements</h2>
+              <p>Official notices for students and staff.</p>
+            </div>
+          </div>
+          <div id="announcement-list" class="announcement-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="events-preview-heading">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 id="events-preview-heading">Upcoming events</h2>
+              <p>A short preview of what is happening next on campus.</p>
+            </div>
+            <a class="btn btn-outline" href="events.html">All events</a>
+          </div>
+          <div id="event-preview" class="card-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h2>CampusConnect</h2>
+            <p>The student portal for Riverside College. Clubs, events, and campus news in one place.</p>
+          </div>
+          <div>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Campus</h3>
+            <p>14 Riverbank Avenue, Pune 411001</p>
+            <p><a href="contact.html">Send feedback</a></p>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Riverside College · CampusConnect</p>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

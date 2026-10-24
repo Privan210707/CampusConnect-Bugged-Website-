@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clubs &amp; Societies | CampusConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">CC</span>
+          <span class="logo-text">
+            <strong>CampusConnect</strong>
+            <span>Riverside College</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <div class="container">
+          <h1>Clubs &amp; Societies</h1>
+          <p>Find a student group by name or category, then open a card for more about the group.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="toolbar">
+            <div class="search-field">
+              <label for="club-search">Search clubs</label>
+              <input id="club-search" type="search" placeholder="Search by name or keyword" />
+            </div>
+            <div id="club-filters" class="filter-group" role="group" aria-label="Filter by category"></div>
+          </div>
+          <p id="club-count" class="result-count" aria-live="polite"></p>
+          <div id="club-grid" class="card-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="club-modal" role="dialog" aria-modal="true" aria-labelledby="club-modal-title">
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <h2 id="club-modal-title">Club details</h2>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Close details">×</button>
+        </div>
+        <div id="club-modal-body"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h2>CampusConnect</h2>
+            <p>The student portal for Riverside College. Clubs, events, and campus news in one place.</p>
+          </div>
+          <div>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="clubs.html">Clubs &amp; Societies</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Campus</h3>
+            <p>14 Riverbank Avenue, Pune 411001</p>
+            <p><a href="contact.html">Send feedback</a></p>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Riverside College · CampusConnect</p>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/clubs.js"></script>
+  </body>
+</html>
