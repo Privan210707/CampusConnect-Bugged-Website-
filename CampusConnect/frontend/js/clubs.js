@@ -8,6 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("club-modal");
   var modalBody = document.getElementById("club-modal-body");
   var activeCategory = "All";
+  var clubImages = {
+    "Sports Club": "Images/sports-club.png",
+    "Social Service Club": "Images/social%20service-club.png",
+    "Photography Club": "Images/photography-club.png",
+    "Cultural Club": "Images/cultural-event.png",
+    "Literary Club": "Images/library-club.png",
+    "Coding Club": "Images/campus%20coding%20challenge-event.png",
+    "Robotics Club": "Images/robotics-event-club.png",
+    "CCC Society": "Images/ccc%20society%20bug%20hunt-event.png"
+  };
 
   CampusConnect.initModal(modal);
 
@@ -39,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderClubs() {
     if (loadError) {
-      count.textContent = "";
+      count.textContent = "7 clubs shown";
       CampusConnect.showState(grid, loadError);
       return;
     }
@@ -49,8 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return matches(club, query);
     });
 
-    count.textContent =
-      visible.length === 1 ? "1 club shown" : visible.length + " clubs shown";
+    count.textContent = "7 clubs shown";
 
     if (!clubs.length) {
       CampusConnect.showState(grid, "No clubs are listed yet.");
@@ -69,11 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .map(function (club) {
         return (
           '<article class="card">' +
-          '<div class="card-media" style="background:' +
-          CampusConnect.mediaGradient(Number(club.id) || 0) +
-          '">' +
-          CampusConnect.escapeHtml((club.name || "").slice(0, 2).toUpperCase()) +
-          "</div>" +
+          (clubImages[club.name]
+            ? '<img class="card-media" src="' + clubImages[club.name] + '" alt="' + CampusConnect.escapeHtml(club.name || "") + '" />'
+            : '<div class="card-media" style="background:' + CampusConnect.mediaGradient(Number(club.id) || 0) + '">' + CampusConnect.escapeHtml((club.name || "").slice(0, 2).toUpperCase()) + "</div>") +
           '<div class="card-body">' +
           '<span class="chip">' +
           CampusConnect.escapeHtml(club.category || "") +
@@ -134,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderFilters();
   CampusConnect.showState(grid, "Loading clubs…");
-  count.textContent = "";
+  count.textContent = "7 clubs shown";
 
   CampusConnect.getJson("/api/clubs/")
     .then(function (items) {

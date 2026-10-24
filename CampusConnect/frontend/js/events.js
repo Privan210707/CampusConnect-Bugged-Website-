@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var eventIdInput = document.getElementById("register-event-id");
   var submitBtn = form.querySelector('button[type="submit"]');
   var selectedEventId = null;
+  var eventImages = {
+    "Cultural Fest": "Images/cultural-event.png",
+    "CCC Society Bug Hunt": "Images/ccc%20society%20bug%20hunt-event.png",
+    "Web Development Workshop": "Images/web%20development%20workshop-event.png",
+    "Campus Coding Challenge": "Images/campus%20coding%20challenge-event.png",
+    "Robotics Demonstration": "Images/robotics-event-club.png"
+  };
 
   CampusConnect.initModal(modal);
 
@@ -35,11 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return (
           '<article class="card">' +
-          '<div class="card-media" style="background:' +
-          CampusConnect.mediaGradient(Number(event.id) || 0) +
-          '">' +
-          CampusConnect.escapeHtml(CampusConnect.formatDate(startsAt)) +
-          "</div>" +
+          (eventImages[event.title]
+            ? '<img class="card-media" src="' + eventImages[event.title] + '" alt="' + CampusConnect.escapeHtml(event.title || "") + ' event" />'
+            : '<div class="card-media" style="background:' + CampusConnect.mediaGradient(Number(event.id) || 0) + '">' + CampusConnect.escapeHtml(CampusConnect.formatDate(startsAt)) + "</div>") +
           '<div class="card-body">' +
           "<h3>" +
           CampusConnect.escapeHtml(event.title || "") +

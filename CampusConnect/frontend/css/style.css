@@ -189,6 +189,25 @@ textarea:focus-visible {
   padding: 72px 0 80px;
 }
 
+.hero > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1 1 55%;
+}
+
+.hero-image {
+  width: min(42%, 440px);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 .hero h1 {
   font-family: var(--display);
   font-size: clamp(2rem, 4vw, 3.3rem);
@@ -366,6 +385,11 @@ main {
   font-family: var(--display);
   font-size: 1.4rem;
   letter-spacing: 0.04em;
+}
+
+img.card-media {
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-body {
@@ -689,6 +713,17 @@ body.modal-open {
 }
 
 @media (max-width: 760px) {
+  .hero > .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-height: 260px;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
